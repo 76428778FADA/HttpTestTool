@@ -48,7 +48,7 @@
             </Border>
 
             <Border x:Name="AboutLink" HorizontalAlignment="Right" Height="40" Margin="10,15,0,0" VerticalAlignment="Top" Width="190" Cursor="Hand" >
-                <TextBlock HorizontalAlignment="Left" Margin="10,10,20,0" TextWrapping="Wrap" Text="模拟服务端响应" Foreground="#DEFFFFFF" FontSize="14"  />
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,20,0" TextWrapping="Wrap" Text="帮助与版本说明" Foreground="#DEFFFFFF" FontSize="14"  />
                 <Border.Style>
                     <Style  TargetType="{x:Type Border}">
                         <Style.Triggers>
@@ -63,6 +63,6 @@
                 </Border.Style>
             </Border>
         </StackPanel>
-        <Frame x:Name="MainFrame" Grid.Column="1"   NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="MainFrame" Grid.Column="1" Source="HttpClientPage.xaml"  NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Controls:MetroWindow>
