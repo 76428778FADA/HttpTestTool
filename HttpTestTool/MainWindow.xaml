@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HttpTestTool"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="HTTP API Tool" Height="600" Width="900"
+        Title="HTTP API Tool" Height="600" Width="960"
         BorderBrush="{DynamicResource AccentColorBrush}"
         BorderThickness="1"
         WindowStartupLocation="CenterScreen">

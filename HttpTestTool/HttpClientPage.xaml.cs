@@ -24,5 +24,10 @@ namespace HttpTestTool
         {
             InitializeComponent();
         }
+
+        private void PostButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
