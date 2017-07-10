@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:HttpTestTool"
       xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="HttpTestTool.HttpClientPage"
       mc:Ignorable="d" 
-      d:DesignHeight="630" d:DesignWidth="700"
+      d:DesignHeight="620" d:DesignWidth="700"
       Title="HttpClientPage">
     <Grid>
         <ScrollViewer ClipToBounds="True">

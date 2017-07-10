@@ -25,6 +25,16 @@ namespace HttpTestTool
         {
             InitializeComponent();
         }
+
+        private void AboutLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("AboutPage.xaml", UriKind.Relative));
+        }
+
+        private void ClientLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("HttpCLientPage.xaml", UriKind.Relative));
+        }
     }
 
 }
