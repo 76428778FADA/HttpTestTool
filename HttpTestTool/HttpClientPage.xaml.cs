@@ -27,7 +27,7 @@ namespace HttpTestTool
             InitializeComponent();
         }
 
-        private void PostButton_Click(object sender, RoutedEventArgs e)
+        private async void SendButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -36,27 +36,37 @@ namespace HttpTestTool
                     MessageBoxUtility.ShowMessageBox("Empty Request URL", false);
                     return;
                 }
-                var url = RequestUrlTextBox.Text.StartsWith("http") ? RequestUrlTextBox.Text : "http://" + RequestUrlTextBox.Text;
-                var content = RequestTextBox.Text;
-                var contentType = TypeComboBox.Text;
-                var method = MethodComboBox.Text;
-                var httpClient = new HttpClientController(20000, contentType, contentType);
-                if (method.ToLower() == "post")
-                {
-                    var result = httpClient.PostData(url, content);
-                    ResponseTextBox.Text = result;
-                    MessageBoxUtility.ShowMessageBox("Success!", true);
-                }
-                else
-                {
-                    ResponseTextBox.Text = "UnSupport Method";
-                }
+                SendButton.Content = "Sending..";
+                SendButton.IsEnabled = false;
+                ResponseTextBox.Text = await SendDataAsync();
+                MessageBoxUtility.ShowMessageBox("Successed!", true);
+                SendButton.Content = "Send";
+                SendButton.IsEnabled = true;
             }
             catch (Exception ex)
             {
                 //MessageBoxUtility.ShowMessageBox(ex.Message, false);
                 ResponseTextBox.Text = "Exception caused:\r\n" + ex.Message;
             }
+        }
+
+        private async Task<String> SendDataAsync()
+        {
+            var url = RequestUrlTextBox.Text.StartsWith("http") ? RequestUrlTextBox.Text : "http://" + RequestUrlTextBox.Text;
+            var content = RequestTextBox.Text;
+            var contentType = TypeComboBox.Text;
+            var method = MethodComboBox.Text;
+            if (method.ToLower() == "post")
+            {
+                return await Task.Run(() =>
+                {
+                    var httpClient = new HttpClientController(20000, contentType, contentType);
+                    var result = httpClient.PostData(url, content);
+                    return result;
+                });
+            }
+            SendButton.IsEnabled = true;
+            return "UnSupport Method";
         }
     }
 }
