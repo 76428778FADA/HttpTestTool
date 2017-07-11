@@ -7,7 +7,7 @@
       d:DesignHeight="620" d:DesignWidth="700"
 	Title="AboutPage">
 
-    <Grid Background="#CCF0F0F0">
+    <Grid Background="#7FF0F0F0">
         <StackPanel Width="660" VerticalAlignment="Top">
             <TextBlock Margin="0,52,0,0">HTTP API TOOL</TextBlock>
             <TextBlock Margin="0,5,0,0" Foreground="#FF686868">Version: 0.0.1(Beta)</TextBlock>

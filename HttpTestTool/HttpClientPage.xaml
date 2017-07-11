@@ -10,7 +10,7 @@
       Title="HttpClientPage">
     <Grid>
         <ScrollViewer ClipToBounds="True">
-            <StackPanel Width="660" VerticalAlignment="Top">
+            <StackPanel Width="660" Margin="10,0,0,0" VerticalAlignment="Top">
                 <StackPanel Width="660" HorizontalAlignment="Stretch" Margin="0,55,0,0" Orientation="Horizontal">
                     <ComboBox  Width="100" Height="32" IsEnabled="False" FontSize="15">
                         <ComboBoxItem IsSelected="True" Content="POST" />

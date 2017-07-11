@@ -27,7 +27,8 @@ namespace HttpTestTool
 
         private void PostButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var messageWindow = new MessageWindow("Empty Request URL");
+            messageWindow.Show();
         }
     }
 }
