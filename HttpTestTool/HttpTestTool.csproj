@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\HttpClientController.cs" />
     <Compile Include="Utilities\MessageBoxUtility.cs" />
     <Page Include="AboutPage.xaml">
       <SubType>Designer</SubType>

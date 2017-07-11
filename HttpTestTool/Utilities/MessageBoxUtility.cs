@@ -14,7 +14,8 @@ namespace HttpTestTool.Utilities
             var left = Application.Current.MainWindow.Left;
             var width = Application.Current.MainWindow.Width;
             var top = Application.Current.MainWindow.Top;
-            var messageWindow = new MessageWindow(message, !isSuccess)
+            int delay = isSuccess ? 1000 : 3000;
+            var messageWindow = new MessageWindow(message, !isSuccess, delay)
             {
                 WindowStartupLocation = WindowStartupLocation.Manual,
                 Left = left + (width - 450 + 250) / 2,

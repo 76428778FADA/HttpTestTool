@@ -12,15 +12,15 @@
         <ScrollViewer ClipToBounds="True">
             <StackPanel Width="660" Margin="10,0,0,0" VerticalAlignment="Top">
                 <StackPanel Width="660" HorizontalAlignment="Stretch" Margin="0,55,0,0" Orientation="Horizontal">
-                    <ComboBox  Width="100" Height="32" IsEnabled="False" FontSize="15">
+                    <ComboBox x:Name="MethodComboBox" Width="100" Height="32" IsEnabled="False" FontSize="15">
                         <ComboBoxItem IsSelected="True" Content="POST" />
                     </ComboBox>
-                    <TextBox x:Name="requestUrl" Width="440" Height="32" Margin="20,0,20,0" FontSize="15" Padding="2" Custom:TextBoxHelper.Watermark="Enter request URL" />
+                    <TextBox x:Name="RequestUrlTextBox" Width="440" Height="32" Margin="20,0,20,0" FontSize="15" Padding="2" Custom:TextBoxHelper.Watermark="Enter request URL" />
                     <Button x:Name="SendButton" Width="80" HorizontalAlignment="Right" Content="Send" FontSize="15" Style="{DynamicResource SquareButtonStyle}" Height="32" Click="PostButton_Click" MinHeight="22" FontWeight="Normal" BorderThickness="1,1,1,1" Custom:ControlsHelper.ContentCharacterCasing="Normal" />
                 </StackPanel>
                 <TextBox x:Name="RequestTextBox"  Visibility="Visible" Height="150" Margin="0,20,0,0" TextWrapping="Wrap" MaxLines="50" AcceptsReturn="True" Text="" Foreground="#FF444444" BorderBrush="#FF18AAFD" FontSize="12" FontFamily="Consolas" Custom:TextBoxHelper.Watermark="Input your request data here" />
                 <StackPanel Width="660" HorizontalAlignment="Stretch" Margin="0,20" Orientation="Horizontal">
-                    <ComboBox  Width="120" Height="20" FontSize="12">
+                    <ComboBox x:Name="TypeComboBox"  Width="120" Height="20" FontSize="12">
                         <ComboBoxItem IsSelected="True" Content="application/json" />
                         <ComboBoxItem Content="application/xml" />
                     </ComboBox>
