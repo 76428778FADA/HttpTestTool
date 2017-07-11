@@ -31,7 +31,8 @@
                     </Style>
                 </Border.Style>
             </Border>
-            <Border x:Name="ServerLink" HorizontalAlignment="Right" Height="40" Margin="10,15,0,0" VerticalAlignment="Top" Width="190" Cursor="Hand" >
+           
+            <!--<Border x:Name="ServerLink" HorizontalAlignment="Right" Height="40" Margin="10,15,0,0" VerticalAlignment="Top" Width="190" Cursor="Hand" MouseLeftButtonDown="ServerLink_MouseLeftButtonDown" >
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,20,0" TextWrapping="Wrap" Text="模拟服务端响应" Foreground="#DEFFFFFF" FontSize="14"  />
                 <Border.Style>
                     <Style  TargetType="{x:Type Border}">
@@ -45,7 +46,7 @@
                         </Style.Triggers>
                     </Style>
                 </Border.Style>
-            </Border>
+            </Border>-->
 
             <Border x:Name="AboutLink" HorizontalAlignment="Right" Height="40" Margin="10,15,0,0" VerticalAlignment="Top" Width="190" Cursor="Hand" MouseLeftButtonDown="AboutLink_MouseLeftButtonDown" >
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,20,0" TextWrapping="Wrap" Text="帮助与版本说明" Foreground="#DEFFFFFF" FontSize="14"  />

@@ -60,8 +60,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HttpServerPage.xaml.cs">
+      <DependentUpon>HttpServerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HttpClientController.cs" />
     <Compile Include="Utilities\MessageBoxUtility.cs" />
+    <Page Include="HttpServerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

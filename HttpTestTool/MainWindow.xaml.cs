@@ -35,6 +35,11 @@ namespace HttpTestTool
         {
             MainFrame.Navigate(new Uri("HttpCLientPage.xaml", UriKind.Relative));
         }
+
+        private void ServerLink_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("HttpServerPage.xaml", UriKind.Relative));
+        }
     }
 
 }
