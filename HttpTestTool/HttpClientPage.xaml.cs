@@ -40,14 +40,15 @@ namespace HttpTestTool
                 SendButton.IsEnabled = false;
                 ResponseTextBox.Text = await SendDataAsync();
                 MessageBoxUtility.ShowMessageBox("Successed!", true);
-                SendButton.Content = "Send";
-                SendButton.IsEnabled = true;
             }
             catch (Exception ex)
             {
+                MessageBoxUtility.ShowMessageBox("Failed!", false);
                 //MessageBoxUtility.ShowMessageBox(ex.Message, false);
                 ResponseTextBox.Text = "Exception caused:\r\n" + ex.Message;
             }
+            SendButton.Content = "Send";
+            SendButton.IsEnabled = true;
         }
 
         private async Task<String> SendDataAsync()
