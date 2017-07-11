@@ -9,12 +9,12 @@ namespace HttpTestTool.Utilities
 {
     class MessageBoxUtility
     {
-        internal static void ShowMessageBox(String message)
+        internal static void ShowMessageBox(String message,Boolean isSuccess)
         {
             var left = Application.Current.MainWindow.Left;
             var width = Application.Current.MainWindow.Width;
             var top = Application.Current.MainWindow.Top;
-            var messageWindow = new MessageWindow(message)
+            var messageWindow = new MessageWindow(message, !isSuccess)
             {
                 WindowStartupLocation = WindowStartupLocation.Manual,
                 Left = left + (width - 450 + 250) / 2,

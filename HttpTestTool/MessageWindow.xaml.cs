@@ -23,11 +23,17 @@ namespace HttpTestTool
     {
 
 
-        private readonly Timer _timer = new Timer(2000);
-        public MessageWindow(String message)  
+        private readonly Timer _timer;
+        public MessageWindow(String message,Boolean isWarn=true,int timer=2000)  
         {  
             InitializeComponent();
             MessageTextBlock.Text = message;
+            if (!isWarn)
+            {
+                Background = new SolidColorBrush(Colors.PaleGreen); //Color.FromArgb(90, 230, 230, 230));
+                MessageTextBlock.Foreground = new SolidColorBrush(Colors.ForestGreen);
+            }
+            _timer = new Timer(timer);
             _timer.Elapsed += timer_Elapsed;  
             _timer.Start();  
         }  

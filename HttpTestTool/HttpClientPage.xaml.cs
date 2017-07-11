@@ -28,7 +28,12 @@ namespace HttpTestTool
 
         private void PostButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxUtility.ShowMessageBox("Empty Request URL");
+            if(String.IsNullOrEmpty(requestUrl.Text))
+            MessageBoxUtility.ShowMessageBox("Empty Request URL",true);
+            var url = requestUrl.Text.StartsWith("http") ? requestUrl.Text : "http://" + requestUrl.Text;
+
+
+
         }
     }
 }
