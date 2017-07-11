@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HttpTestTool.Utilities;
 
 namespace HttpTestTool
 {
@@ -27,8 +28,7 @@ namespace HttpTestTool
 
         private void PostButton_Click(object sender, RoutedEventArgs e)
         {
-            var messageWindow = new MessageWindow("Empty Request URL");
-            messageWindow.Show();
+            MessageBoxUtility.ShowMessageBox("Empty Request URL");
         }
     }
 }
