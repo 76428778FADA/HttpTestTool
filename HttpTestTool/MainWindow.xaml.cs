@@ -40,6 +40,12 @@ namespace HttpTestTool
         {
             MainFrame.Navigate(new Uri("HttpServerPage.xaml", UriKind.Relative));
         }
+
+        private void MetroWindow_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+            //Environment.Exit(0);
+        }
     }
 
 }

@@ -9,7 +9,7 @@
         Title="HTTP API Tool" Height="630" Width="1000" MinHeight="630" MinWidth="1000"
         BorderBrush="{DynamicResource AccentColorBrush}"
         BorderThickness="1"
-        WindowStartupLocation="CenterScreen" WindowTitleBrush="DeepSkyBlue"  NonActiveWindowTitleBrush="DodgerBlue" NonActiveBorderBrush="DodgerBlue">
+        WindowStartupLocation="CenterScreen" WindowTitleBrush="DeepSkyBlue"  NonActiveWindowTitleBrush="DodgerBlue" NonActiveBorderBrush="DodgerBlue" Closed="MetroWindow_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>

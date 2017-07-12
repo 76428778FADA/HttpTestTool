@@ -41,7 +41,7 @@ namespace HttpTestTool
         void timer_Elapsed(object sender, ElapsedEventArgs e)  
         {  
             _timer.Stop();  
-            Dispatcher.Invoke(DispatcherPriority.Normal, (Action)Hide);  
+            Dispatcher.Invoke(DispatcherPriority.Normal, (Action)Close);  
         }  
     }
 }
