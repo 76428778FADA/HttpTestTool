@@ -23,7 +23,7 @@ namespace HttpTestTool
 
         void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
-            MessageBoxUtility.ShowMessageBox("Error:" + e.Exception.Message,false);
+            MessageBox.Show("Error:" + e.Exception.Message);
             e.Handled = true;
         }
     }
