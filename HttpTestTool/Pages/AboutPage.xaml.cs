@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Diagnostics;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace HttpTestTool.Pages
 {
@@ -10,6 +12,11 @@ namespace HttpTestTool.Pages
         public AboutPage()
         {
             InitializeComponent();
+        }
+
+        private void Help_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start("https://github.com/abcdevhub/httptesttool#readme");
         }
     }
 }
